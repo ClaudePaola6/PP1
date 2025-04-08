@@ -68,20 +68,31 @@ When you have finished working, in Moodle, click "Add solution" and submit the l
 Fill out the following table, mapping decimal numbers `0` through `15` to their binary representations:
 
 | Decimal | Binary Representation |
-|---------|------------------------|
-| 0       | 0000                   |
-| 1       | 0001                   |
-| ...     | ...                    |
-| 15      | ????                   |
+|---------|-----------------------|
+| 0       |0000                   |
+| 1       |0001                   |
+| 2       |0010             
+|3        |0011
+|4        |0100
+|5        |0101
+|6        |0110
+|7        |0111
+|8        |1000
+|9        |1001
+|10       |1010
+|11       |1011
+|12       |1100
+|13       |1101
+|14       |1110
+| 15      |1111                 |
 
 **How many binary digits (bits) are needed?**
 
 Explain how to calculate the number of bits required:
 <details>
 <summary>Your Answer</summary>
-Erase this text and write your answer here!
-</details>
-
+wir brauchen
+Für 16 Werte ( von 0 bis 15) hat man log(2) 16 = 4 bit 
 ---
 
 ### Task 2: Mapping Binary to Binary
@@ -107,15 +118,28 @@ Refer to the truth table of a 1-bit full adder:
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
 
->   Your
->
->   table
->
->   goes
->
->   here!
+A1  |  A0  |  B1  |  B0  |  Cout  |  S1  |  S0
+----------------------------------------------
+ 0  |   0  |   0  |   0  |   0    |  0   |  0 
+ 0  |   0  |   0  |   1  |   0    |  0   |  1
+ 0  |   0  |   1  |   0  |   0    |  1   |  0
+ 0  |   0  |   1  |   1  |   0    |  1   |  1
+ 0  |   1  |   0  |   0  |   0    |  0   |  1
+ 0  |   1  |   0  |   1  |   0    |  1   |  0
+ 0  |   1  |   1  |   0  |   0    |  1   |  1
+ 0  |   1  |   1  |   1  |   1    |  0   |  0
+ 1  |   0  |   0  |   0  |   0    |  1   |  0
+ 1  |   0  |   0  |   1  |   0    |  1   |  1
+ 1  |   0  |   1  |   0  |   1    |  0   |  0
+ 1  |   0  |   1  |   1  |   1    |  0   |  1
+ 1  |   1  |   0  |   0  |   0    |  1   |  1
+ 1  |   1  |   0  |   1  |   1    |  0   |  0
+ 1  |   1  |   1  |   0  |   1    |  0   |  1
+ 1  |   1  |   1  |   1  |   1    |  1   |  0
+ 
+Die mögliche Eingänge wären A1, A0, B0, B1 und die Ausgänge Cout, S1,S0
 
----
+
 
 ### Task 3: Boolean Equations via Karnaugh Maps
 Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5aa370f36e) to derive Boolean equations for each output bit in your 2-bit adder.
@@ -128,11 +152,17 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = .......
+Q<sub>0</sub> = (Bo and not A0) or
+                (not B0 and A0)
 
-Q<sub>1</sub> = .......
+Q<sub>1</sub> = (B1 and not B0 and A1) or
+                (B1 and not A1 and not A0) or
+                (not B1 and A1 and not A0) or
+                (not B1 and not B0 and A1) or
+                (B1 and B0 and A1 and A0) or
+                (not B1 and B0 and not A1 and A0)
 
-C<sub>out</sub> = .......
+C<sub>out</sub> = (A1 and B1) or (B1 and B0 and A0) and (B0 andA1 and A0)
 
 </details>
 
