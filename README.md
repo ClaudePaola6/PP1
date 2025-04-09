@@ -162,7 +162,7 @@ Q<sub>1</sub> = (B1 and not B0 and A1) or
                 (B1 and B0 and A1 and A0) or
                 (not B1 and B0 and not A1 and A0)
 
-C<sub>out</sub> = (A1 and B1) or (B1 and B0 and A0) and (B0 andA1 and A0)
+C<sub>out</sub> = (A1 and B1) or (B1 and B0 and A0) and (B0 and A1 and A0)
 
 </details>
 
@@ -173,7 +173,7 @@ Using your Boolean equations, build a logic network in [CircuitVerse](https://ci
 
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href=".................">Link!</a>
+A share link to your solution goes here: https://circuitverse.org/users/306435/projects/schaltung-378f56a2-d2c5-42a9-b41b-28a9f5a3e0be
 </details>
 
 ---
